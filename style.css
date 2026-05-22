@@ -73,7 +73,10 @@ body {
 }
 
 #header-logo-img {
-    height: 45px;
+    height: 140px;
+    margin-top: -45px;
+    margin-bottom: -45px;
+    margin-left: -45px;
     object-fit: contain;
     transition: var(--transition-fast);
 }
@@ -890,8 +893,11 @@ h2 {
 }
 
 .footer-brand #footer-logo-img {
-    height: 50px;
-    margin-bottom: 20px;
+    height: 160px;
+    margin-top: -50px;
+    margin-bottom: -30px;
+    margin-left: -50px;
+    object-fit: contain;
 }
 
 .footer-jargon {
@@ -1025,6 +1031,13 @@ h2 {
         position: relative;
     }
     
+    #header-logo-img {
+        margin-left: 0;
+        margin-top: -30px;
+        margin-bottom: -30px;
+        height: 120px;
+    }
+    
     #main-navigation ul {
         flex-wrap: wrap;
         justify-content: center;
@@ -1050,6 +1063,13 @@ h2 {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 30px;
+    }
+    
+    .footer-brand #footer-logo-img {
+        margin-left: 0;
+        margin-top: -35px;
+        margin-bottom: -15px;
+        height: 130px;
     }
     
     .footer-bottom {
