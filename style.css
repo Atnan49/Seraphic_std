@@ -381,11 +381,16 @@ body {
     animation: float-mascot 8s ease-in-out infinite;
 }
 
-#mascot-3d-model {
+#hero-logo-display {
     width: 100%;
     height: 100%;
-    outline: none;
-    border: none;
+    object-fit: contain;
+    filter: drop-shadow(0 0 30px rgba(0, 188, 212, 0.5)) drop-shadow(0 10px 20px rgba(59, 130, 246, 0.3));
+    transition: var(--transition-smooth);
+}
+
+#hero-logo-display:hover {
+    transform: scale(1.05);
 }
 
 @keyframes float-mascot {
