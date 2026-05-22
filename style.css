@@ -311,61 +311,6 @@ body {
     letter-spacing: 1px;
 }
 
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-}
-
-.btn-order-now {
-    background-color: var(--color-bg-white);
-    color: var(--color-primary-dark);
-    padding: 16px 36px;
-    border-radius: var(--radius-pill);
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 16px;
-    letter-spacing: 1px;
-    box-shadow: var(--shadow-md);
-    transition: var(--transition-smooth);
-    border: 2px solid var(--color-bg-white);
-}
-
-.btn-order-now:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25);
-    background-color: transparent;
-    color: var(--color-bg-white);
-}
-
-.btn-ig {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    color: var(--color-text-light);
-    padding: 16px 36px;
-    border-radius: var(--radius-pill);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: var(--transition-smooth);
-}
-
-.btn-ig:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: var(--color-accent);
-    transform: translateY(-3px);
-}
-
-.btn-icon {
-    display: inline-block;
-}
 
 /* --- Hero Showcase (Logo Brand Card) --- */
 .hero-showcase {
@@ -917,26 +862,6 @@ h2 {
     margin-bottom: 25px;
 }
 
-.phone-display {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background-color: rgba(255,255,255,0.1);
-    border: 2px solid rgba(255,255,255,0.2);
-    padding: 14px 32px;
-    border-radius: var(--radius-pill);
-    margin-bottom: 25px;
-}
-
-.phone-icon {
-    font-size: 20px;
-}
-
-.phone-number-text {
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
 
 #order-now p {
     font-size: 16px;
@@ -1084,9 +1009,6 @@ h2 {
         margin-right: auto;
     }
     
-    .hero-buttons {
-        justify-content: center;
-    }
     
     .hero-showcase {
         height: 400px;
@@ -1200,15 +1122,6 @@ h2 {
         min-height: auto;
     }
     
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .btn-order-now, .btn-ig {
-        width: 100%;
-        justify-content: center;
-    }
     
     .hero-showcase {
         height: auto;
