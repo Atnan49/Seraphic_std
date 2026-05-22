@@ -958,6 +958,139 @@ h2 {
     padding: 0 20px 20px;
 }
 
+/* --- FAQ Section --- */
+#faq {
+    background-color: var(--color-bg-light);
+    padding: 100px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-header h2 {
+    color: var(--color-primary-dark);
+    margin-bottom: 10px;
+}
+
+.faq-header .section-desc {
+    color: var(--color-primary);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.faq-item {
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.faq-item:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 24px 30px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition-smooth);
+    font-family: inherit;
+}
+
+.faq-question:hover {
+    color: var(--color-accent);
+}
+
+.faq-icon {
+    font-size: 24px;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+    color: var(--color-accent);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-item.active .faq-question {
+    color: var(--color-accent);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #fafafa;
+}
+
+.faq-answer p {
+    padding: 24px 30px;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    font-size: 15px;
+    margin: 0;
+}
+
+.faq-list {
+    padding: 24px 30px 24px 50px;
+    margin: 0;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.faq-list li {
+    margin-bottom: 12px;
+}
+
+.faq-list li:last-child {
+    margin-bottom: 0;
+}
+
+.faq-list strong {
+    color: var(--color-primary-dark);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+    .faq-question {
+        font-size: 16px;
+        padding: 20px;
+    }
+    .faq-answer p, .faq-list {
+        padding: 20px 20px 20px 40px;
+    }
+}
+
 /* --- Footer Section: Centered Premium Layout --- */
 #main-footer {
     background: linear-gradient(180deg, #0d4bbf 0%, #072a72 100%);
@@ -1145,9 +1278,11 @@ h2 {
     0% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
     }
+
     70% {
         box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
     }
@@ -1205,6 +1340,7 @@ h2 {
         transform: scale(1);
         opacity: 0.6;
     }
+
     100% {
         transform: scale(1.5);
         opacity: 0;
@@ -1389,10 +1525,29 @@ h2 {
         transform: translateY(0);
     }
 
-    #main-navigation.active ul li:nth-child(1) { transition-delay: 0.15s; }
-    #main-navigation.active ul li:nth-child(2) { transition-delay: 0.22s; }
-    #main-navigation.active ul li:nth-child(3) { transition-delay: 0.29s; }
-    #main-navigation.active ul li:nth-child(4) { transition-delay: 0.36s; }
+    #main-navigation.active ul li:nth-child(1) {
+        transition-delay: 0.15s;
+    }
+
+    #main-navigation.active ul li:nth-child(2) {
+        transition-delay: 0.22s;
+    }
+
+    #main-navigation.active ul li:nth-child(3) {
+        transition-delay: 0.29s;
+    }
+
+    #main-navigation.active ul li:nth-child(4) {
+        transition-delay: 0.36s;
+    }
+
+    #main-navigation.active ul li:nth-child(5) {
+        transition-delay: 0.43s;
+    }
+
+    #main-navigation.active ul li:nth-child(6) {
+        transition-delay: 0.50s;
+    }
 
     #main-navigation ul li a {
         display: block;
@@ -1446,7 +1601,7 @@ h2 {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .footer-links-col:first-child,
     .footer-links-col:last-child {
         text-align: center;
@@ -1765,17 +1920,21 @@ body.nav-open {
     .privacy-section {
         padding: 110px 4% 60px;
     }
+
     .privacy-container {
         padding: 35px 24px;
         border-radius: var(--radius-md);
     }
+
     .privacy-title {
         font-size: 28px;
     }
+
     .privacy-content h3 {
         font-size: 18px;
         margin-top: 25px;
     }
+
     .privacy-content p {
         font-size: 15px;
         line-height: 1.7;
@@ -1968,12 +2127,15 @@ body.nav-open {
     #our-location {
         padding: 60px 5% 60px;
     }
+
     .location-info h2 {
         font-size: 28px;
     }
+
     .map-wrapper {
         height: 300px;
     }
+
     .address-card {
         padding: 20px;
     }

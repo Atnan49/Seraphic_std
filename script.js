@@ -3,7 +3,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // --- Mobile Hamburger Menu & Overlay ---
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mainNavigation = document.getElementById('main-navigation');
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const servicePills = document.querySelectorAll('.service-pill');
     const whatsappBtn = document.getElementById('whatsapp-order-btn');
     const orderSection = document.getElementById('order-now');
-    
+
     // Create status text inside order container to show active selection
     const orderContainer = document.querySelector('.order-container');
     let selectionStatusText = document.createElement('p');
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     selectionStatusText.style.marginBottom = '20px';
     selectionStatusText.style.fontSize = '15px';
     selectionStatusText.style.transition = 'all 0.3s ease';
-    
+
     if (orderContainer && whatsappBtn) {
         // Insert right above the WhatsApp button description
         const btnDescription = orderContainer.querySelector('p');
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         pill.addEventListener('click', () => {
             const serviceName = pill.textContent.trim();
             let formattedService = serviceName;
-            
+
             // Format some naming variations nicely for WA chat
             if (serviceName === 'Apa Aja!!') {
                 formattedService = 'Desain Custom';
@@ -77,14 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const textMessage = `Halo Seraphic.Std, saya tertarik untuk konsultasi jasa desain ${formattedService}. Bagaimana prosedurnya?`;
             const encodedText = encodeURIComponent(textMessage);
             whatsappBtn.href = `https://wa.me/6285126712214?text=${encodedText}`;
-            
+
             // Highlight active service pill
             servicePills.forEach(p => p.classList.remove('active-pill'));
             pill.classList.add('active-pill');
 
             // Show confirmation text at CTA area
             selectionStatusText.innerHTML = `Layanan Terpilih: <span style="text-decoration: underline;">${formattedService}</span> ✨`;
-            
+
             // Smooth scroll to order section
             orderSection.scrollIntoView({ behavior: 'smooth' });
         });
@@ -208,6 +208,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     spySections.forEach(section => {
         scrollspyObserver.observe(section);
+    });
+
+    // --- FAQ Accordion Logic ---
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const questionBtn = item.querySelector('.faq-question');
+
+        questionBtn.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all items
+            faqItems.forEach(faq => {
+                faq.classList.remove('active');
+                const answer = faq.querySelector('.faq-answer');
+                if (answer) answer.style.maxHeight = null;
+                const btn = faq.querySelector('.faq-question');
+                if (btn) btn.setAttribute('aria-expanded', 'false');
+            });
+
+            // If the clicked item wasn't active, open it
+            if (!isActive) {
+                item.classList.add('active');
+                const answer = item.querySelector('.faq-answer');
+                if (answer) {
+                    answer.style.maxHeight = (answer.scrollHeight + 50) + "px";
+                }
+                questionBtn.setAttribute('aria-expanded', 'true');
+            }
+        });
     });
 
 });
