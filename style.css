@@ -706,17 +706,19 @@ h2 {
 /* --- Flyer Showcase Section --- */
 #flyer-section {
     background-color: var(--color-bg-white);
-    padding: 0;
-    width: 100%;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .flyer-container {
     width: 100%;
-    max-width: 100%;
-    border-radius: 0;
-    box-shadow: none;
-    margin: 0;
+    max-width: 700px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    margin-top: 20px;
+    border: 1px solid rgba(14, 61, 122, 0.08);
 }
 
 #img-flyer-promo {
