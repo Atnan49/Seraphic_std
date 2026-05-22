@@ -13,24 +13,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <!-- Google Model Viewer for 3D GLB Models -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <!-- Custom JS script for interactivity -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Header Section -->
     <header id="main-header">
         <div class="logo-container">
             <a href="#" id="header-logo-link">
                 <img src="logo.png" alt="Seraphic.Std Logo" id="header-logo-img">
             </a>
         </div>
+        <!-- Hamburger Menu Button for Mobile -->
+        <button id="mobile-menu-btn" class="hamburger" aria-label="Buka Menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <nav id="main-navigation" aria-label="Menu Utama">
             <ul>
                 <li><a href="#about" id="nav-link-about">About</a></li>
-                <li><a href="#produk-digital" id="nav-link-produk">Produk</a></li>
                 <li><a href="#design-services" id="nav-link-design">Design</a></li>
+                <li><a href="#design-preview" id="nav-link-portfolio">Portfolio</a></li>
                 <li><a href="#produk-digital" id="nav-link-digital">Produk Digital</a></li>
                 <li><a href="#order-now" id="nav-link-order" class="btn-order">Order Now</a></li>
             </ul>
@@ -73,7 +78,9 @@
                     </div>
                 </div>
                 <div class="hero-showcase">
-                    <img src="logo.png" alt="Seraphic.Std Logo Display" id="hero-logo-display">
+                    <div class="brand-card-glow">
+                        <img src="logo.png" alt="Seraphic.Std Logo Display" id="hero-logo-display">
+                    </div>
                 </div>
             </div>
         </section>
@@ -102,23 +109,39 @@
             <p class="section-desc">Kumpulan portofolio hasil karya terbaik yang telah kami kerjakan:</p>
             <div class="portfolio-grid">
                 <div class="portfolio-item" id="portfolio-item-1">
-                    <img src="https://via.placeholder.com/400x300?text=Desain+Logo+Seraphic"
-                        alt="Preview Desain Logo Seraphic" id="img-portfolio-1">
+                    <div class="portfolio-img-container">
+                        <img src="portfolio_logo.png" alt="Desain Logo Modern" id="img-portfolio-1">
+                        <div class="portfolio-overlay">
+                            <span>Lihat Detail</span>
+                        </div>
+                    </div>
                     <h4>Desain Logo Modern</h4>
                 </div>
                 <div class="portfolio-item" id="portfolio-item-2">
-                    <img src="https://via.placeholder.com/400x300?text=Desain+Branding+Seraphic"
-                        alt="Preview Desain Branding Seraphic" id="img-portfolio-2">
+                    <div class="portfolio-img-container">
+                        <img src="portfolio_branding.png" alt="Branding & Stationary" id="img-portfolio-2">
+                        <div class="portfolio-overlay">
+                            <span>Lihat Detail</span>
+                        </div>
+                    </div>
                     <h4>Branding & Stationary</h4>
                 </div>
                 <div class="portfolio-item" id="portfolio-item-3">
-                    <img src="https://via.placeholder.com/400x300?text=Desain+Kemasan+Seraphic"
-                        alt="Preview Desain Kemasan Seraphic" id="img-portfolio-3">
+                    <div class="portfolio-img-container">
+                        <img src="portfolio_packaging.png" alt="Desain Kemasan Kreatif" id="img-portfolio-3">
+                        <div class="portfolio-overlay">
+                            <span>Lihat Detail</span>
+                        </div>
+                    </div>
                     <h4>Desain Kemasan Kreatif</h4>
                 </div>
                 <div class="portfolio-item" id="portfolio-item-4">
-                    <img src="https://via.placeholder.com/400x300?text=Konten+Sosmed+Seraphic"
-                        alt="Preview Konten Sosmed Seraphic" id="img-portfolio-4">
+                    <div class="portfolio-img-container">
+                        <img src="portfolio_instagram.png" alt="Desain Feed Instagram" id="img-portfolio-4">
+                        <div class="portfolio-overlay">
+                            <span>Lihat Detail</span>
+                        </div>
+                    </div>
                     <h4>Desain Feed Instagram</h4>
                 </div>
             </div>
@@ -175,7 +198,7 @@
                     </div>
                     <div class="why-badge-card" id="badge-experience">
                         <div class="badge-content">
-                            <h3>Pengalaman 7 Tahun</h3>
+                            <h3>Pengalaman 9 Tahun</h3>
                             <p>Dalam Dunia Desain</p>
                         </div>
                     </div>
@@ -259,20 +282,17 @@
             <p class="section-desc">Selain jasa desain custom, kami juga menyediakan produk digital siap pakai:</p>
             <div class="digital-products-grid">
                 <div class="product-card" id="digital-product-1">
-                    <img src="https://via.placeholder.com/400x300?text=Template+Sosmed+Pack"
-                        alt="Preview Template Sosial Media Seraphic" id="img-digital-1">
+                    <img src="product_social.png" alt="Template Media Sosial" id="img-digital-1">
                     <h3>Template Media Sosial</h3>
                     <p>Koleksi template Canva & Photoshop siap pakai untuk promosi instagram Anda.</p>
                 </div>
                 <div class="product-card" id="digital-product-2">
-                    <img src="https://via.placeholder.com/400x300?text=Asset+Vector+Pack"
-                        alt="Preview Asset Vektor Seraphic" id="img-digital-2">
+                    <img src="product_vector.png" alt="Vektor & Ilustrasi Pack" id="img-digital-2">
                     <h3>Vektor & Ilustrasi Pack</h3>
                     <p>Paket aset ilustrasi orisinal berformat vektor untuk melengkapi desain Anda.</p>
                 </div>
                 <div class="product-card" id="digital-product-3">
-                    <img src="https://via.placeholder.com/400x300?text=Branding+Kit+Template"
-                        alt="Preview Template Branding Kit Seraphic" id="img-digital-3">
+                    <img src="product_branding_kit.png" alt="Branding Kit Templates" id="img-digital-3">
                     <h3>Branding Kit Templates</h3>
                     <p>Template kartu nama, invoice, dan portofolio profesional.</p>
                 </div>
@@ -317,8 +337,8 @@
                 <h4>Main Menu</h4>
                 <ul>
                     <li><a href="#about" id="footer-link-about">About</a></li>
-                    <li><a href="#produk-digital" id="footer-link-produk">Produk</a></li>
                     <li><a href="#design-services" id="footer-link-design">Design</a></li>
+                    <li><a href="#design-preview" id="footer-link-portfolio">Portfolio</a></li>
                     <li><a href="#produk-digital" id="footer-link-digital">Produk Digital</a></li>
                     <li><a href="#order-now" id="footer-link-order">Order Now</a></li>
                 </ul>
@@ -335,6 +355,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- Portfolio Lightbox Modal -->
+    <div id="portfolio-lightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Fullscreen Portfolio Preview">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
 
 </body>
 
