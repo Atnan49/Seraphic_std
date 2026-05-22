@@ -1727,6 +1727,29 @@ body.nav-open {
     color: var(--color-text-light);
 }
 
+.privacy-content ul {
+    list-style-type: none;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+.privacy-content li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    color: var(--color-text-dark);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.privacy-content li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
 @media (max-width: 768px) {
     .privacy-section {
         padding: 110px 4% 60px;
