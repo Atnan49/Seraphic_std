@@ -153,7 +153,10 @@ document.addEventListener('DOMContentLoaded', () => {
         '.terms-marquee-wrapper, ' +
         '.software-item, ' +
         '.product-card, ' +
-        '.order-container'
+        '.order-container, ' +
+        '#studio-address-card, ' +
+        '#google-maps-btn, ' +
+        '#studio-location-map'
     );
 
     // Apply basic reveal style class
