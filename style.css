@@ -894,6 +894,11 @@ h2 {
     border-radius: 50%;
 }
 
+.logo-coreldraw {
+    background: linear-gradient(135deg, #00c060 0%, #005020 100%);
+    border-radius: 50%;
+}
+
 /* --- Digital Products Preview --- */
 #produk-digital {
     background-color: var(--color-bg-light);
