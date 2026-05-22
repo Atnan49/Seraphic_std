@@ -120,6 +120,14 @@ body {
     color: var(--color-accent);
 }
 
+#main-navigation ul li a.nav-link-active:not(.btn-order) {
+    color: var(--color-accent);
+}
+
+#main-navigation ul li a.nav-link-active:not(.btn-order)::after {
+    width: 100%;
+}
+
 #main-navigation ul li a.btn-order {
     background-color: var(--color-bg-white);
     color: var(--color-primary-dark);
@@ -1166,9 +1174,10 @@ h2 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: right 0.45s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1005;
         border-left: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: var(--radius-lg) 0 0 var(--radius-lg);
         padding: 40px 20px;
     }
 
@@ -1186,12 +1195,33 @@ h2 {
     #main-navigation ul li {
         width: 100%;
         text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+    #main-navigation.active ul li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #main-navigation.active ul li:nth-child(1) { transition-delay: 0.15s; }
+    #main-navigation.active ul li:nth-child(2) { transition-delay: 0.22s; }
+    #main-navigation.active ul li:nth-child(3) { transition-delay: 0.29s; }
+    #main-navigation.active ul li:nth-child(4) { transition-delay: 0.36s; }
+    #main-navigation.active ul li:nth-child(5) { transition-delay: 0.43s; }
 
     #main-navigation ul li a {
         display: block;
-        padding: 8px;
+        padding: 10px;
         font-size: 18px;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    #main-navigation ul li a.nav-link-active:not(.btn-order) {
+        color: var(--color-accent);
+        text-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
+        font-weight: 700;
     }
 
     #main-navigation ul li a.btn-order {
@@ -1248,13 +1278,14 @@ h2 {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 20px;
+    width: 44px;
+    height: 44px;
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding: 12px 7px;
     z-index: 1010;
+    margin-right: -7px;
 }
 
 .hamburger .bar {
@@ -1262,19 +1293,20 @@ h2 {
     height: 3px;
     background-color: var(--color-text-light);
     border-radius: 2px;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(8.5px) rotate(45deg);
 }
 
 .hamburger.active .bar:nth-child(2) {
     opacity: 0;
+    transform: translateX(-10px);
 }
 
 .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-8.5px) rotate(-45deg);
 }
 
 /* Highlight active pill for order pre-fill selection */
@@ -1397,4 +1429,30 @@ h2 {
 
 .product-card:nth-child(3) {
     transition-delay: 0.2s;
+}
+
+/* --- Body Lock and Nav Overlay Styling --- */
+body.nav-open {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(7, 35, 75, 0.4);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 1004;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
