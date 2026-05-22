@@ -1241,16 +1241,6 @@ h2 {
     .btn-order-header {
         padding: 8px 16px;
         font-size: 14px;
-        background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-sky) 100%);
-        color: var(--color-text-light);
-        box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
-    }
-    
-    .btn-order-header:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 6px 15px rgba(0, 188, 212, 0.5);
-        background: var(--color-accent);
-        color: var(--color-text-light);
     }
 
     #hero-section {
