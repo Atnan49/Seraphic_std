@@ -1630,3 +1630,120 @@ body.nav-open {
     opacity: 1;
     visibility: visible;
 }
+
+/* --- Privacy Page Styles --- */
+.privacy-section {
+    padding: 140px 8% 80px;
+    background-color: var(--color-bg-light);
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.privacy-container {
+    max-width: 800px;
+    width: 100%;
+    background-color: var(--color-bg-white);
+    padding: 50px 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(14, 61, 122, 0.05);
+}
+
+.privacy-title {
+    color: var(--color-primary-dark);
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.privacy-date {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    margin-bottom: 35px;
+    display: block;
+}
+
+.privacy-content h3 {
+    color: var(--color-primary-dark);
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.privacy-content h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 18px;
+    background-color: var(--color-accent);
+    border-radius: var(--radius-pill);
+}
+
+.privacy-content p {
+    color: var(--color-text-dark);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.privacy-content a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.privacy-content a:hover {
+    color: var(--color-accent-sky);
+    text-decoration: underline;
+}
+
+.privacy-back-btn {
+    display: inline-block;
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-light);
+    padding: 12px 30px;
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-sm);
+}
+
+.privacy-back-btn:hover {
+    background-color: var(--color-accent-sky);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+    color: var(--color-text-light);
+}
+
+@media (max-width: 768px) {
+    .privacy-section {
+        padding: 110px 4% 60px;
+    }
+    .privacy-container {
+        padding: 35px 24px;
+        border-radius: var(--radius-md);
+    }
+    .privacy-title {
+        font-size: 28px;
+    }
+    .privacy-content h3 {
+        font-size: 18px;
+        margin-top: 25px;
+    }
+    .privacy-content p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
