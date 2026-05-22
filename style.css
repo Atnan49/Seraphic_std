@@ -843,21 +843,30 @@ h2 {
     text-align: center;
 }
 
-.soft-logo-placeholder {
+.soft-logo-placeholder,
+.soft-logo-img {
     width: 64px;
     height: 64px;
     border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+}
+
+.soft-logo-placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     font-weight: 800;
     color: #fff;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition-smooth);
 }
 
-.software-item:hover .soft-logo-placeholder {
+.soft-logo-img {
+    object-fit: contain;
+}
+
+.software-item:hover .soft-logo-placeholder,
+.software-item:hover .soft-logo-img {
     transform: scale(1.1) rotate(5deg);
     box-shadow: var(--shadow-md);
 }
@@ -870,12 +879,13 @@ h2 {
 
 /* Custom CSS Logos mimicking reference flyer */
 .logo-pixellab {
-    background: radial-gradient(circle, #0284c7 0%, #0369a1 100%);
+    background: none;
     border-radius: 50%;
 }
 
 .logo-infinite {
-    background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    background: none;
+    border-radius: 50%;
 }
 
 .logo-photoshop {
@@ -890,13 +900,15 @@ h2 {
 }
 
 .logo-canva {
-    background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+    background-color: #ffffff;
     border-radius: 50%;
+    padding: 12px;
 }
 
 .logo-coreldraw {
-    background: linear-gradient(135deg, #00c060 0%, #005020 100%);
+    background-color: #ffffff;
     border-radius: 50%;
+    padding: 10px;
 }
 
 /* --- Digital Products Preview --- */
