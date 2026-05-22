@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '.why-choose-text, ' +
         '.why-badge-card, ' +
         '.flyer-container, ' +
-        '.term-card, ' +
+        '.terms-marquee-wrapper, ' +
         '.software-item, ' +
         '.product-card, ' +
         '.order-container'
