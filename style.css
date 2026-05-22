@@ -895,7 +895,7 @@ h2 {
 }
 
 .logo-alight {
-    background: radial-gradient(circle at center, #22c55e 0%, #16a34a 40%, #14532d 100%);
+    background: none;
     border-radius: 50%;
 }
 
