@@ -1133,7 +1133,7 @@ h2 {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     section {
         padding: 60px 5%;
     }
@@ -1284,6 +1284,7 @@ h2 {
     border: none;
     cursor: pointer;
     padding: 12px 7px;
+    position: relative;
     z-index: 1010;
     margin-right: -7px;
 }
