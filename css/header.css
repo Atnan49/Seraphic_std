@@ -292,7 +292,7 @@
         text-align: center;
     }
 
-    .btn-order-mobile {
+    #main-navigation ul li a.btn-order-mobile {
         display: inline-block;
         background-color: var(--color-bg-white);
         color: var(--color-primary-dark);
@@ -307,7 +307,11 @@
         text-align: center;
     }
 
-    .btn-order-mobile:hover {
+    #main-navigation ul li a.btn-order-mobile::after {
+        display: none;
+    }
+
+    #main-navigation ul li a.btn-order-mobile:hover {
         background-color: var(--color-accent);
         color: var(--color-text-light);
         box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
