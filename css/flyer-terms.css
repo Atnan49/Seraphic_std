@@ -13,9 +13,10 @@
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     margin-top: 20px;
-    border: 1px solid rgba(14, 61, 122, 0.08);
+    border: none;
     transition: var(--transition-smooth);
     cursor: pointer;
+    background-color: #0e3d7a;
 }
 
 .flyer-container:hover {
@@ -27,6 +28,8 @@
     width: 100%;
     height: auto;
     display: block;
+    transform: scale(1.02);
+    transform-origin: center;
 }
 
 /* --- Terms & Conditions: S&K berlaku --- */
