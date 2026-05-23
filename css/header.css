@@ -105,6 +105,10 @@
     box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
 }
 
+.mobile-only-item {
+    display: none;
+}
+
 /* Hamburger Button styles */
 .hamburger {
     display: none;
@@ -256,6 +260,10 @@
         transition-delay: 0.50s;
     }
 
+    #main-navigation.active ul li:nth-child(7) {
+        transition-delay: 0.57s;
+    }
+
     #main-navigation ul li a {
         display: block;
         padding: 10px;
@@ -274,7 +282,35 @@
     }
 
     .btn-order-header {
-        padding: 8px 16px;
-        font-size: 14px;
+        display: none;
+    }
+
+    .mobile-only-item {
+        display: block;
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-order-mobile {
+        display: inline-block;
+        background-color: var(--color-bg-white);
+        color: var(--color-primary-dark);
+        padding: 12px 32px;
+        border-radius: var(--radius-pill);
+        box-shadow: var(--shadow-sm);
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 16px;
+        transition: var(--transition-smooth);
+        width: 80%;
+        text-align: center;
+    }
+
+    .btn-order-mobile:hover {
+        background-color: var(--color-accent);
+        color: var(--color-text-light);
+        box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+        transform: translateY(-2px);
     }
 }
