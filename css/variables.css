@@ -1,0 +1,79 @@
+/* --- CSS Variables & Design System --- */
+:root {
+    --font-primary: 'Plus Jakarta Sans', sans-serif;
+
+    /* Colors inspired by reference flyer */
+    --color-primary: #155bb3;
+    --color-primary-dark: #0e3d7a;
+    --color-primary-deep: #07234b;
+    --color-accent: #00bcd4;
+    --color-accent-sky: #3b82f6;
+    --color-text-dark: #1e293b;
+    --color-text-light: #f8fafc;
+    --color-text-muted: #94a3b8;
+    --color-bg-light: #f8fafc;
+    --color-bg-white: #ffffff;
+    --color-whatsapp: #25d366;
+
+    /* Shadows & Transitions */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(14, 61, 122, 0.08);
+    --shadow-lg: 0 10px 25px rgba(14, 61, 122, 0.15);
+    --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.35);
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Border Radius */
+    --radius-pill: 50px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+}
+
+/* --- Global Reset & Base Styling --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body.nav-open {
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* --- Common Section Layout --- */
+section {
+    padding: 80px 8%;
+}
+
+.section-desc {
+    font-size: 16px;
+    color: var(--color-text-muted);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+@media screen and (max-width: 992px) {
+    section {
+        padding: 60px 5%;
+    }
+}

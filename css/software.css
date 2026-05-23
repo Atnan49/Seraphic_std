@@ -1,0 +1,91 @@
+/* --- Software Used: Custom CSS Logos --- */
+#software-used {
+    background-color: var(--color-bg-white);
+}
+
+.software-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.software-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 140px;
+    text-align: center;
+}
+
+.soft-logo-placeholder,
+.soft-logo-img {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+}
+
+.soft-logo-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.soft-logo-img {
+    object-fit: contain;
+}
+
+.software-item:hover .soft-logo-placeholder,
+.software-item:hover .soft-logo-img {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: var(--shadow-md);
+}
+
+.software-item span:last-child {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+/* Custom CSS Logos mimicking reference flyer */
+.logo-pixellab {
+    background: none;
+    border-radius: 50%;
+}
+
+.logo-infinite {
+    background: none;
+    border-radius: 50%;
+}
+
+.logo-photoshop {
+    background-color: #001e36;
+    border: 2px solid #00c8ff;
+    color: #00c8ff;
+}
+
+.logo-alight {
+    background: none;
+    border-radius: 50%;
+}
+
+.logo-canva {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 12px;
+}
+
+.logo-coreldraw {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+}

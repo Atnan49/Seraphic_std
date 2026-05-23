@@ -1,0 +1,101 @@
+/* --- Preview Design / Portfolio Section --- */
+#design-preview {
+    background-color: var(--color-bg-light);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    background-color: var(--color-bg-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-smooth);
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.portfolio-img-container {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.portfolio-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 61, 122, 0.85);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-overlay span {
+    color: var(--color-text-light);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius-pill);
+    transform: translateY(15px);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-img-container:hover img {
+    transform: scale(1.08);
+}
+
+.portfolio-img-container:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-img-container:hover .portfolio-overlay span {
+    transform: translateY(0);
+}
+
+.portfolio-item h4 {
+    padding: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    text-align: center;
+}
+
+/* Stagger list item animation delay */
+.portfolio-item:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.portfolio-item:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.portfolio-item:nth-child(4) {
+    transition-delay: 0.3s;
+}

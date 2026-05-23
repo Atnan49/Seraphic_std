@@ -1,0 +1,22 @@
+/* --- About Us / Cerita Kami --- */
+#about {
+    background: linear-gradient(135deg, var(--color-primary-deep) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-text-light);
+}
+
+#about h2 {
+    color: var(--color-text-light);
+    margin-bottom: 30px;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-container p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+}

@@ -1,0 +1,332 @@
+/* --- FAQ Section --- */
+#faq {
+    background-color: var(--color-bg-light);
+    padding: 100px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-header h2 {
+    color: var(--color-primary-dark);
+    margin-bottom: 10px;
+}
+
+.faq-header .section-desc {
+    color: var(--color-primary);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.faq-item {
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.faq-item:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 24px 30px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition-smooth);
+    font-family: inherit;
+}
+
+.faq-question:hover {
+    color: var(--color-accent);
+}
+
+.faq-icon {
+    font-size: 24px;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+    color: var(--color-accent);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-item.active .faq-question {
+    color: var(--color-accent);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #fafafa;
+}
+
+.faq-answer p {
+    padding: 24px 30px;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    font-size: 15px;
+    margin: 0;
+}
+
+.faq-list {
+    padding: 24px 30px 24px 50px;
+    margin: 0;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.faq-list li {
+    margin-bottom: 12px;
+}
+
+.faq-list li:last-child {
+    margin-bottom: 0;
+}
+
+.faq-list strong {
+    color: var(--color-primary-dark);
+    font-weight: 700;
+}
+
+/* --- Location Section (Alamat Kami) --- */
+#our-location {
+    padding: 100px 8% 100px;
+    background-color: var(--color-bg-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.location-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.location-info h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    position: relative;
+    display: inline-block;
+}
+
+.location-info h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-sky) 100%);
+    border-radius: var(--radius-pill);
+    margin-top: 10px;
+}
+
+.location-info .section-desc {
+    font-size: 16px;
+    color: var(--color-text-dark);
+    line-height: 1.7;
+}
+
+.address-card {
+    background: var(--color-bg-light);
+    border: 1px solid rgba(14, 61, 122, 0.08);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-sm);
+}
+
+.address-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(0, 188, 212, 0.3);
+}
+
+.address-icon {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    color: var(--color-text-light);
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(21, 91, 179, 0.2);
+}
+
+.address-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.address-details h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+}
+
+.address-details p {
+    font-size: 15px;
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+.country-tag {
+    align-self: flex-start;
+    background: rgba(0, 188, 212, 0.1);
+    color: var(--color-accent);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-maps {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    align-self: flex-start;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 28px;
+    border-radius: var(--radius-pill);
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-maps:hover {
+    background: linear-gradient(135deg, var(--color-accent-sky) 0%, var(--color-accent) 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+    color: var(--color-text-light);
+}
+
+.btn-maps .arrow-svg {
+    transition: transform var(--transition-fast);
+}
+
+.btn-maps:hover .arrow-svg {
+    transform: translateX(4px);
+}
+
+.location-map {
+    position: relative;
+}
+
+.map-wrapper {
+    width: 100%;
+    height: 400px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 4px solid var(--color-bg-white);
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.map-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: calc(var(--radius-lg) - 4px);
+    box-shadow: inset 0 0 0 1px rgba(0, 188, 212, 0.1);
+    pointer-events: none;
+    z-index: 2;
+    transition: var(--transition-smooth);
+}
+
+.location-map:hover .map-wrapper {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(14, 61, 122, 0.15), 0 0 25px rgba(0, 188, 212, 0.2);
+    border-color: rgba(0, 188, 212, 0.3);
+}
+
+@media screen and (max-width: 992px) {
+    .location-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .faq-question {
+        font-size: 16px;
+        padding: 20px;
+    }
+    .faq-answer p, .faq-list {
+        padding: 20px 20px 20px 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #our-location {
+        padding: 60px 5% 60px;
+    }
+
+    .location-info h2 {
+        font-size: 28px;
+    }
+
+    .map-wrapper {
+        height: 300px;
+    }
+
+    .address-card {
+        padding: 20px;
+    }
+}

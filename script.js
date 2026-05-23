@@ -39,69 +39,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Dynamic WhatsApp Order Generator ---
-    const servicePills = document.querySelectorAll('.service-pill');
-    const whatsappBtn = document.getElementById('whatsapp-order-btn');
-    const orderSection = document.getElementById('order-now');
 
-    // Create status text inside order container to show active selection
-    const orderContainer = document.querySelector('.order-container');
-    let selectionStatusText = document.createElement('p');
-    selectionStatusText.className = 'whatsapp-selection-status';
-    selectionStatusText.style.fontWeight = 'bold';
-    selectionStatusText.style.color = 'var(--color-accent)';
-    selectionStatusText.style.marginTop = '-15px';
-    selectionStatusText.style.marginBottom = '20px';
-    selectionStatusText.style.fontSize = '15px';
-    selectionStatusText.style.transition = 'all 0.3s ease';
 
-    if (orderContainer && whatsappBtn) {
-        // Insert right above the WhatsApp button description
-        const btnDescription = orderContainer.querySelector('p');
-        orderContainer.insertBefore(selectionStatusText, btnDescription);
-    }
-
-    servicePills.forEach(pill => {
-        pill.addEventListener('click', () => {
-            const serviceName = pill.textContent.trim();
-            let formattedService = serviceName;
-
-            // Format some naming variations nicely for WA chat
-            if (serviceName === 'Apa Aja!!') {
-                formattedService = 'Desain Custom';
-            } else if (serviceName === 'UMKM') {
-                formattedService = 'Desain Branding UMKM';
-            }
-
-            // Update WA button URL
-            const textMessage = `Halo Seraphic.Std, saya tertarik untuk konsultasi jasa desain ${formattedService}. Bagaimana prosedurnya?`;
-            const encodedText = encodeURIComponent(textMessage);
-            whatsappBtn.href = `https://wa.me/6285126712214?text=${encodedText}`;
-
-            // Highlight active service pill
-            servicePills.forEach(p => p.classList.remove('active-pill'));
-            pill.classList.add('active-pill');
-
-            // Show confirmation text at CTA area
-            selectionStatusText.innerHTML = `Layanan Terpilih: <span style="text-decoration: underline;">${formattedService}</span> ✨`;
-
-            // Smooth scroll to order section
-            orderSection.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-
-    // --- Portfolio Lightbox Modal ---
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    // --- Lightbox Modal (Portfolio & Digital Products) ---
+    const lightboxItems = document.querySelectorAll('.portfolio-item, .product-card');
     const lightboxModal = document.getElementById('portfolio-lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
     const lightboxClose = document.querySelector('.lightbox-close');
 
-    if (portfolioItems && lightboxModal && lightboxImg) {
-        portfolioItems.forEach(item => {
-            const container = item.querySelector('.portfolio-img-container');
+    if (lightboxItems && lightboxModal && lightboxImg) {
+        lightboxItems.forEach(item => {
+            const container = item.querySelector('.portfolio-img-container, .product-img-container');
             const img = item.querySelector('img');
-            const title = item.querySelector('h4');
+            const title = item.querySelector('h4, h3');
 
             if (container && img && title) {
                 container.addEventListener('click', () => {
