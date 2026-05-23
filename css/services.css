@@ -19,7 +19,8 @@
     border-radius: var(--radius-pill);
     font-weight: 700;
     font-size: 15px;
-    cursor: default;
+    cursor: pointer;
+    text-decoration: none;
     box-shadow: var(--shadow-sm);
     transition: var(--transition-smooth);
     border: 1px solid transparent;
