@@ -6,4 +6,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://seraphic-std.vercel.app/Sitemap.xml
+Sitemap: https://seraphic-std.vercel.app/sitemap.xml
