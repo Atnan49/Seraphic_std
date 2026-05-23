@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // --- Lightbox Modal (Portfolio & Digital Products) ---
-    const lightboxItems = document.querySelectorAll('.portfolio-item, .product-card');
+    // --- Lightbox Modal (Portfolio, Digital Products & Promo Flyer) ---
+    const lightboxItems = document.querySelectorAll('.portfolio-item, .product-card, .flyer-container');
     const lightboxModal = document.getElementById('portfolio-lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (lightboxItems && lightboxModal && lightboxImg) {
         lightboxItems.forEach(item => {
-            const container = item.querySelector('.portfolio-img-container, .product-img-container');
+            const container = item.querySelector('.portfolio-img-container, .product-img-container') || item;
             const img = item.querySelector('img');
-            const title = item.querySelector('h4, h3');
+            const title = item.querySelector('h4, h3') || { textContent: 'Promo Banner' };
 
             if (container && img && title) {
                 container.addEventListener('click', () => {
