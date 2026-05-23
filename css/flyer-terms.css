@@ -9,7 +9,7 @@
 .flyer-container {
     width: 100%;
     max-width: 1100px;
-    border-radius: var(--radius-lg);
+    border-radius: 36px;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     margin-top: 20px;
