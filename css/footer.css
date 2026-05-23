@@ -10,6 +10,7 @@
 .footer-centered-container {
     display: grid;
     grid-template-columns: 1.3fr 1fr 1.3fr;
+    align-items: center;
     gap: 60px;
     width: 100%;
     max-width: 1200px;
