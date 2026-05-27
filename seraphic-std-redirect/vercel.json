@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://seraphic-std-five.vercel.app/$1",
+      "permanent": true
+    }
+  ]
+}
