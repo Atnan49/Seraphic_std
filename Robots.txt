@@ -1,9 +1,9 @@
 # robots.txt - Seraphic.Std
-# https://seraphic-std.vercel.app/
+# https://seraphic-std-five.vercel.app/
 
 # Izinkan semua crawler (Google, Bing, dll.)
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://seraphic-std.vercel.app/sitemap.xml
+Sitemap: https://seraphic-std-five.vercel.app/sitemap.xml
